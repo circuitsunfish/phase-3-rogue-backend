@@ -40,9 +40,9 @@ MAP
 
 #####
 puts "removing old data..."
-EntitiesHaveTypes.destroy_all
+EntitiesHaveType.destroy_all
 Entity.destroy_all
-EntityTypes.destroy_all
+EntityType.destroy_all
 GameLevel.destroy_all
 GameSession.destroy_all
 
@@ -76,9 +76,9 @@ puts "end level"
 ###
 puts "seeding entity types"
 
-et_a = EntityTypes.create(entity_type_name: "fighter", can_move: 1, can_attack: 1, is_player: 1, dead_player: 0, ends_level: 0, default_emoji: "😎", default_attack: 5, default_speed: 1, default_hp: 10)
-et_b = EntityTypes.create(entity_type_name: "clown", can_move: 1, can_attack: 1, is_player: 0, dead_player: 0, ends_level: 0, default_emoji: "🤡", default_attack: 3, default_speed: 1, default_hp: 5)
-et_c = EntityTypes.create(entity_type_name: "bed", can_move: 0, can_attack: 0, is_player: 0, dead_player: 0, ends_level: 1, default_emoji: "🛌", default_attack: 0, default_speed: 0, default_hp: 0)
+et_a = EntityType.create(entity_type_name: "fighter", can_move: 1, can_attack: 1, is_player: 1, dead_player: 0, ends_level: 0, default_emoji: "😎", default_attack: 5, default_speed: 1, default_hp: 10)
+et_b = EntityType.create(entity_type_name: "clown", can_move: 1, can_attack: 1, is_player: 0, dead_player: 0, ends_level: 0, default_emoji: "🤡", default_attack: 3, default_speed: 1, default_hp: 5)
+et_c = EntityType.create(entity_type_name: "bed", can_move: 0, can_attack: 0, is_player: 0, dead_player: 0, ends_level: 1, default_emoji: "🛌", default_attack: 0, default_speed: 0, default_hp: 0)
 
 puts "end entity types"
 ###
@@ -99,15 +99,15 @@ puts "end entity"
 
 puts "seeding entity have types"
 
-eht_a = EntitiesHaveTypes.create(entity_id: 1, entity_types_id: 1)
-eht_b = EntitiesHaveTypes.create(entity_id: 2, entity_types_id: 2)
-eht_c = EntitiesHaveTypes.create(entity_id: 3, entity_types_id: 3)
-eht_e = EntitiesHaveTypes.create(entity_id: 4, entity_types_id: 1)
-eht_f = EntitiesHaveTypes.create(entity_id: 5, entity_types_id: 2)
-eht_g = EntitiesHaveTypes.create(entity_id: 6, entity_types_id: 3)
-eht_h = EntitiesHaveTypes.create(entity_id: 7, entity_types_id: 1)
-eht_i = EntitiesHaveTypes.create(entity_id: 8, entity_types_id: 2)
-eht_j = EntitiesHaveTypes.create(entity_id: 9, entity_types_id: 3)
+eht_a = EntitiesHaveType.create(entity_id: 1, entity_type_id: 1)
+eht_b = EntitiesHaveType.create(entity_id: 2, entity_type_id: 2)
+eht_c = EntitiesHaveType.create(entity_id: 3, entity_type_id: 3)
+eht_e = EntitiesHaveType.create(entity_id: 4, entity_type_id: 1)
+eht_f = EntitiesHaveType.create(entity_id: 5, entity_type_id: 2)
+eht_g = EntitiesHaveType.create(entity_id: 6, entity_type_id: 3)
+eht_h = EntitiesHaveType.create(entity_id: 7, entity_type_id: 1)
+eht_i = EntitiesHaveType.create(entity_id: 8, entity_type_id: 2)
+eht_j = EntitiesHaveType.create(entity_id: 9, entity_type_id: 3)
 puts "end entity have types"
 ###
 

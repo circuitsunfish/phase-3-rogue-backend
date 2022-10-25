@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_10_25_011207) do
 
   create_table "entities_have_types", force: :cascade do |t|
     t.integer "entity_id"
-    t.integer "entity_types_id"
+    t.integer "entity_type_id"
   end
 
   create_table "entity_types", force: :cascade do |t|
