@@ -1,6 +1,7 @@
 require 'rack'
+require_relative "./config/environment"
 
 class App 
 end
 
-run App.new
+run ApplicationController
