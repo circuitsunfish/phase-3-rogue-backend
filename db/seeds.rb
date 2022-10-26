@@ -79,6 +79,8 @@ puts "seeding entity types"
 et_a = EntityType.create(entity_type_name: "fighter", can_move: 1, can_attack: 1, is_player: 1, dead_player: 0, ends_level: 0, default_emoji: "😎", default_attack: 5, default_speed: 1, default_hp: 10)
 et_b = EntityType.create(entity_type_name: "clown", can_move: 1, can_attack: 1, is_player: 0, dead_player: 0, ends_level: 0, default_emoji: "🤡", default_attack: 3, default_speed: 1, default_hp: 5)
 et_c = EntityType.create(entity_type_name: "bed", can_move: 0, can_attack: 0, is_player: 0, dead_player: 0, ends_level: 1, default_emoji: "🛌", default_attack: 0, default_speed: 0, default_hp: 0)
+et_c = EntityType.create(entity_type_name: "bones", can_move: 1, can_attack: 1, is_player: 0, dead_player: 1, ends_level: 0, default_emoji: "💀", default_attack: 5, default_speed: 1, default_hp: 10)
+
 
 puts "end entity types"
 ###
