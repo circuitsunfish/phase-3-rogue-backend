@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     #     myentity.to_json
     # end
 
-    get '/start_game' do
+    get '/new_game' do
        GameInfo.start_game
     end
 
