@@ -10,9 +10,9 @@ class ApplicationController < Sinatra::Base
        GameInfo.start_game
     end
 
-    get '/get_entities' do
-        theEntities = Session.first.entities.entity_types
-        theEntities.to_json
-    end
+    # get '/get_entities' do
+    #     theEntities = Session.first.entities.entity_types
+    #     theEntities.to_json
+    # end
 
 end
