@@ -7,7 +7,12 @@ class ApplicationController < Sinatra::Base
     # end
 
     get '/start_game' do
-        newGame = GameSession.create(session_name: "OUR NEW TEST GAME")
-        newGame.to_json
+       GameInfo.start_game
     end
+
+    get '/get_entities' do
+        theEntities = Session.first.entities.entity_types
+        theEntities.to_json
+    end
+
 end
