@@ -18,6 +18,8 @@ class ApplicationController < Sinatra::Base
         #     player: params[:player],
         #     clown: params[:clown]
         # );
+
+        #this (game_level_id: newGameSession.id,) is not good. TODO: something more reasonable
         newGameSession = GameSession.create(session_name: params[:id]);
         newEntities = Entity.create(game_level_id: newGameSession.id, position_x: params[:player_position_x], position_y: params[:player_position_y], custom_emoji: params[:player_emoji]);
         newGameSession.to_json;
