@@ -19,9 +19,13 @@ class ApplicationController < Sinatra::Base
         #     clown: params[:clown]
         # );
         newGameSession = GameSession.create(session_name: params[:id]);
-        newEntities = Entity.create(game_level_id: params[1], position_x: params[:player_position_x], position_y: params[:player_position_y], custom_emoji: params[:player_emoji]);
+        newEntities = Entity.create(game_level_id: newGameSession.id, position_x: params[:player_position_x], position_y: params[:player_position_y], custom_emoji: params[:player_emoji]);
         newGameSession.to_json;
         newEntities.to_json;
+    end
+
+    post '/load_game' do
+        "{response: 'load game endpoint'}".to_json
     end
 
     # update '/save_game:id' do
