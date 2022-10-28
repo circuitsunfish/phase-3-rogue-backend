@@ -14,7 +14,8 @@ ActiveRecord::Schema.define(version: 2022_10_25_011207) do
 
   create_table "entities", force: :cascade do |t|
     t.integer "game_level_id"
-    t.text "position"
+    t.integer "position_x"
+    t.integer "position_y"
     t.text "custom_emoji"
     t.integer "attack_stat"
     t.integer "speed_stat"

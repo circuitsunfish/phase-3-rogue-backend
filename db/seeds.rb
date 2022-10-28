@@ -87,15 +87,15 @@ puts "end entity types"
 
 puts "seeding entity"
 
-e_a = Entity.create(game_level_id: 1, position: "1,1", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_b = Entity.create(game_level_id: 1, position: "5,9", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_c = Entity.create(game_level_id: 1, position: "1,5", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_e = Entity.create(game_level_id: 2, position: "1,1", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_f = Entity.create(game_level_id: 2, position: "5,9", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_g = Entity.create(game_level_id: 2, position: "1,5", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_h = Entity.create(game_level_id: 3, position: "1,1", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_i = Entity.create(game_level_id: 3, position: "5,9", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
-e_j = Entity.create(game_level_id: 3, position: "1,5", custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+e_a = Entity.create(game_level_id: 1, position_x: 85, position_y: 75, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+e_b = Entity.create(game_level_id: 1, position_x: 225, position_y: 95, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+e_c = Entity.create(game_level_id: 1, position_x: 525, position_y: 575, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+# e_e = Entity.create(game_level_id: 2, position_x: "1,1", position_y: ,custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+# e_f = Entity.create(game_level_id: 2, position_x: "5,9", position_y: ,custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+# e_g = Entity.create(game_level_id: 2, position_x: "1,5", position_y: ,custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+# e_h = Entity.create(game_level_id: 3, position_x: "1,1", position_y: ,custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+# e_i = Entity.create(game_level_id: 3, position_x: "5,9", position_y: ,custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+# e_j = Entity.create(game_level_id: 3, position_x: "1,5", position_y: , custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
 puts "end entity"
 ###
 

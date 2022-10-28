@@ -10,6 +10,24 @@ class ApplicationController < Sinatra::Base
        GameInfo.start_game
     end
 
+    post '/save_game' do
+        # binding.pry
+        # game_id = GameSession.find(params[:id])
+        # gameInfo = GameSession.create(
+        #     session_name: params[:id]
+        #     player: params[:player],
+        #     clown: params[:clown]
+        # );
+        newGameSession = GameSession.create(session_name: params[:id]);
+        newEntities = Entity.create(game_level_id: params[1], position_x: params[:player_position_x], position_y: params[:player_position_y], custom_emoji: params[:player_emoji]);
+        newGameSession.to_json;
+        newEntities.to_json;
+    end
+
+    # update '/save_game:id' do
+
+    # end
+
     # get '/get_entities' do
     #     theEntities = Session.first.entities.entity_types
     #     theEntities.to_json

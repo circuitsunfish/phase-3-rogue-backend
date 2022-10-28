@@ -4,13 +4,13 @@ class GameLevel < ActiveRecord::Base
 
 
 def api_getEntitiesForSession
-   player = Entity.create(game_level_id: self.id, position:nil, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+   player = Entity.create(game_level_id: self.id, position_x: nil, position_y: nil, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
    player.getPlayerEntityTypesForSession
 
-   clown = Entity.create(game_level_id: self.id, position:nil, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+   clown = Entity.create(game_level_id: self.id, position_x: nil, position_y: nil, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
    clown.getClownEntityTypesForSession
 
-   bed = Entity.create(game_level_id: self.id, position:nil, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
+   bed = Entity.create(game_level_id: self.id, position_x: nil, position_y: nil, custom_emoji: nil, attack_stat: nil, speed_stat: nil, hp_stat: nil)
    bed.getBedEntityTypesForSession
 
    part_1 = {:self => player, :inherited_from_types_arr => player.entity_types}
