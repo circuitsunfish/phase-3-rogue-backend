@@ -24,8 +24,8 @@ class ApplicationController < Sinatra::Base
         newEntities.to_json;
     end
 
-    post '/load_game' do
-        "{response: 'load game endpoint'}".to_json
+    get '/load_game' do
+        Entity.api_getSavedPlayersForSession.to_json
     end
 
     # update '/save_game:id' do

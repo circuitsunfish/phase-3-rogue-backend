@@ -19,4 +19,8 @@ class Entity < ActiveRecord::Base
         this_entity_has_type = EntitiesHaveType.create(entity_id: self.id, entity_type_id: 4)
     end
 
+    def self.api_getSavedPlayersForSession
+        self.all.where("game_level_id NOT NULL AND position_x NOT NULL AND position_y NOT NULL")
+    end
+
 end
