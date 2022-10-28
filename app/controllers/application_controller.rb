@@ -28,6 +28,13 @@ class ApplicationController < Sinatra::Base
         Entity.api_getSavedPlayersForSession.to_json
     end
 
+#this method will take care of everything, just need the game_level_id of the entity to remove
+    post '/delete_saved_game' do
+        Entity.api_deleteSavedPlayersOnSession(params[:id])
+    end
+
+
+
     # update '/save_game:id' do
 
     # end

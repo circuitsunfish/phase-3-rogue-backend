@@ -23,4 +23,12 @@ class Entity < ActiveRecord::Base
         self.all.where("game_level_id NOT NULL AND position_x NOT NULL AND position_y NOT NULL")
     end
 
+    def self.api_deleteSavedPlayersOnSession (session_id)
+        to_delete = Entity.api_getSavedPlayersForSession.find_by(game_level_id: session_id)
+        puts "will destroy"
+        puts to_delete
+        to_delete.destroy
+        puts "destroyed"
+    end
+
 end
