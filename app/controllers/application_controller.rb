@@ -1,3 +1,5 @@
+require "pry"
+
 class ApplicationController < Sinatra::Base
     set :default_content_type, 'application/json'
 
@@ -19,9 +21,11 @@ class ApplicationController < Sinatra::Base
         #     clown: params[:clown]
         # );
         newGameSession = GameSession.create(session_name: params[:id]);
-        newEntities = Entity.create(game_level_id: newGameSession.id, position_x: params[:player_position_x], position_y: params[:player_position_y], custom_emoji: params[:player_emoji]);
+        newPlayerEntities = Entity.create(game_level_id: newGameSession.id, position_x: params[:player_position_x], position_y: params[:player_position_y], custom_emoji: params[:player_emoji]);
+        newClownEntities = Entity.create(game_level_id: newGameSession.id, position_x: params[:clown_position_x], position_y: params[:clown_position_y], custom_emoji: params[:clown_emoji])
         newGameSession.to_json;
-        newEntities.to_json;
+        newPlayerEntities.to_json;
+        newClownEntities.to_json;
     end
 
     get '/load_game' do
@@ -29,7 +33,7 @@ class ApplicationController < Sinatra::Base
     end
 
 #this method will take care of everything, just need the game_level_id of the entity to remove
-    post '/delete_saved_game' do
+    delete '/delete_save_game/:id' do
         Entity.api_deleteSavedPlayersOnSession(params[:id])
     end
 
