@@ -31,3 +31,193 @@ Migrating to CreateGameLevels (20221102155823)
   [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-02 15:58:41.568645"], ["updated_at", "2022-11-02 15:58:41.568645"]]
   [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEntityHaveType Load (0.2ms)[0m  [1m[34mSELECT "entity_have_types".* FROM "entity_have_types"[0m
+  [1m[36mEntity Load (0.1ms)[0m  [1m[34mSELECT "entities".* FROM "entities"[0m
+  [1m[36mEntityType Load (0.6ms)[0m  [1m[34mSELECT "entity_types".* FROM "entity_types"[0m
+  [1m[36mGameLevel Load (0.1ms)[0m  [1m[34mSELECT "game_levels".* FROM "game_levels"[0m
+  [1m[36mGameSession Load (0.1ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEntityHaveType Load (0.2ms)[0m  [1m[34mSELECT "entity_have_types".* FROM "entity_have_types"[0m
+  [1m[36mEntity Load (0.0ms)[0m  [1m[34mSELECT "entities".* FROM "entities"[0m
+  [1m[36mEntityType Load (0.5ms)[0m  [1m[34mSELECT "entity_types".* FROM "entity_types"[0m
+  [1m[36mGameLevel Load (0.0ms)[0m  [1m[34mSELECT "game_levels".* FROM "game_levels"[0m
+  [1m[36mGameSession Load (0.0ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Create (0.5ms)[0m  [1m[32mINSERT INTO "game_sessions" ("session_player_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_player_name", "test1"], ["created_at", "2022-11-02 19:59:54.475950"], ["updated_at", "2022-11-02 19:59:54.475950"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Create (0.3ms)[0m  [1m[32mINSERT INTO "game_sessions" ("session_player_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_player_name", "test2"], ["created_at", "2022-11-02 19:59:54.478386"], ["updated_at", "2022-11-02 19:59:54.478386"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Create (0.1ms)[0m  [1m[32mINSERT INTO "game_sessions" ("session_player_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_player_name", "test3"], ["created_at", "2022-11-02 19:59:54.484151"], ["updated_at", "2022-11-02 19:59:54.484151"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.2ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "a"], ["map_data", "1111111111\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 1], ["created_at", "2022-11-02 19:59:54.489323"], ["updated_at", "2022-11-02 19:59:54.489323"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.1ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "b"], ["map_data", "1111111111\n1000000001\n1000000001\n1111111001\n1000000001\n1000000001\n1001111111\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 1], ["created_at", "2022-11-02 19:59:54.490855"], ["updated_at", "2022-11-02 19:59:54.490855"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.1ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "c"], ["map_data", "1111111111\n1000100001\n1000100001\n1000100001\n1000100001\n1000000001\n1000000001\n1001000001\n1001000001\n1111111111\n"], ["game_session_id", 2], ["created_at", "2022-11-02 19:59:54.492161"], ["updated_at", "2022-11-02 19:59:54.492161"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.1ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "d"], ["map_data", "1111111111\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 2], ["created_at", "2022-11-02 19:59:54.493283"], ["updated_at", "2022-11-02 19:59:54.493283"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.2ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "e"], ["map_data", "1111111111\n1000000001\n1000000001\n1111111001\n1000000001\n1000000001\n1001111111\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 3], ["created_at", "2022-11-02 19:59:54.494604"], ["updated_at", "2022-11-02 19:59:54.494604"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (2.2ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "f"], ["map_data", "1111111111\n1000100001\n1000100001\n1000100001\n1000100001\n1000000001\n1000000001\n1001000001\n1001000001\n1111111111\n"], ["game_session_id", 3], ["created_at", "2022-11-02 19:59:54.496121"], ["updated_at", "2022-11-02 19:59:54.496121"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.2ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "fighter"], ["default_emoji", "😎"], ["can_move", 1], ["can_attack", 1], ["is_player", 1], ["dead_player", 0], ["ends_level", 0], ["default_attack", 5], ["default_speed", 1], ["default_hp", 10], ["created_at", "2022-11-02 19:59:54.505572"], ["updated_at", "2022-11-02 19:59:54.505572"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "clown"], ["default_emoji", "🤡"], ["can_move", 1], ["can_attack", 1], ["is_player", 0], ["dead_player", 0], ["ends_level", 0], ["default_attack", 3], ["default_speed", 1], ["default_hp", 5], ["created_at", "2022-11-02 19:59:54.507147"], ["updated_at", "2022-11-02 19:59:54.507147"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.2ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "bed"], ["default_emoji", "🛌"], ["can_move", 0], ["can_attack", 0], ["is_player", 0], ["dead_player", 0], ["ends_level", 1], ["default_attack", 0], ["default_speed", 0], ["default_hp", 0], ["created_at", "2022-11-02 19:59:54.508580"], ["updated_at", "2022-11-02 19:59:54.508580"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "bones"], ["default_emoji", "💀"], ["can_move", 1], ["can_attack", 1], ["is_player", 0], ["dead_player", 1], ["ends_level", 0], ["default_attack", 5], ["default_speed", 1], ["default_hp", 10], ["created_at", "2022-11-02 19:59:54.510052"], ["updated_at", "2022-11-02 19:59:54.510052"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Create (0.2ms)[0m  [1m[32mINSERT INTO "entities" ("custom_emoji", "game_level_id", "position_x", "position_y", "attack_stat", "speed_stat", "hp_stat", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["custom_emoji", nil], ["game_level_id", 1], ["position_x", 85], ["position_y", 75], ["attack_stat", nil], ["speed_stat", nil], ["hp_stat", nil], ["created_at", "2022-11-02 19:59:54.516450"], ["updated_at", "2022-11-02 19:59:54.516450"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Create (0.1ms)[0m  [1m[32mINSERT INTO "entities" ("custom_emoji", "game_level_id", "position_x", "position_y", "attack_stat", "speed_stat", "hp_stat", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["custom_emoji", nil], ["game_level_id", 1], ["position_x", 225], ["position_y", 95], ["attack_stat", nil], ["speed_stat", nil], ["hp_stat", nil], ["created_at", "2022-11-02 19:59:54.518319"], ["updated_at", "2022-11-02 19:59:54.518319"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Create (0.1ms)[0m  [1m[32mINSERT INTO "entities" ("custom_emoji", "game_level_id", "position_x", "position_y", "attack_stat", "speed_stat", "hp_stat", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["custom_emoji", nil], ["game_level_id", 1], ["position_x", 525], ["position_y", 575], ["attack_stat", nil], ["speed_stat", nil], ["hp_stat", nil], ["created_at", "2022-11-02 19:59:54.519755"], ["updated_at", "2022-11-02 19:59:54.519755"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEntityHaveType Load (0.2ms)[0m  [1m[34mSELECT "entity_have_types".* FROM "entity_have_types"[0m
+  [1m[36mEntity Load (0.1ms)[0m  [1m[34mSELECT "entities".* FROM "entities"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Destroy (0.4ms)[0m  [1m[31mDELETE FROM "entities" WHERE "entities"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Destroy (0.2ms)[0m  [1m[31mDELETE FROM "entities" WHERE "entities"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Destroy (0.1ms)[0m  [1m[31mDELETE FROM "entities" WHERE "entities"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEntityType Load (0.2ms)[0m  [1m[34mSELECT "entity_types".* FROM "entity_types"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Destroy (0.1ms)[0m  [1m[31mDELETE FROM "entity_types" WHERE "entity_types"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Destroy (0.1ms)[0m  [1m[31mDELETE FROM "entity_types" WHERE "entity_types"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Destroy (0.1ms)[0m  [1m[31mDELETE FROM "entity_types" WHERE "entity_types"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Destroy (0.1ms)[0m  [1m[31mDELETE FROM "entity_types" WHERE "entity_types"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGameLevel Load (0.1ms)[0m  [1m[34mSELECT "game_levels".* FROM "game_levels"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_levels" WHERE "game_levels"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_levels" WHERE "game_levels"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_levels" WHERE "game_levels"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_levels" WHERE "game_levels"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_levels" WHERE "game_levels"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_levels" WHERE "game_levels"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGameSession Load (0.0ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_sessions" WHERE "game_sessions"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_sessions" WHERE "game_sessions"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Destroy (0.1ms)[0m  [1m[31mDELETE FROM "game_sessions" WHERE "game_sessions"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Create (0.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("session_player_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_player_name", "test1"], ["created_at", "2022-11-02 20:00:30.137051"], ["updated_at", "2022-11-02 20:00:30.137051"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Create (0.1ms)[0m  [1m[32mINSERT INTO "game_sessions" ("session_player_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_player_name", "test2"], ["created_at", "2022-11-02 20:00:30.138439"], ["updated_at", "2022-11-02 20:00:30.138439"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameSession Create (0.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("session_player_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_player_name", "test3"], ["created_at", "2022-11-02 20:00:30.139789"], ["updated_at", "2022-11-02 20:00:30.139789"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.2ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "a"], ["map_data", "1111111111\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 1], ["created_at", "2022-11-02 20:00:30.141333"], ["updated_at", "2022-11-02 20:00:30.141333"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.2ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "b"], ["map_data", "1111111111\n1000000001\n1000000001\n1111111001\n1000000001\n1000000001\n1001111111\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 1], ["created_at", "2022-11-02 20:00:30.142851"], ["updated_at", "2022-11-02 20:00:30.142851"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.1ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "c"], ["map_data", "1111111111\n1000100001\n1000100001\n1000100001\n1000100001\n1000000001\n1000000001\n1001000001\n1001000001\n1111111111\n"], ["game_session_id", 2], ["created_at", "2022-11-02 20:00:30.144366"], ["updated_at", "2022-11-02 20:00:30.144366"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.1ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "d"], ["map_data", "1111111111\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 2], ["created_at", "2022-11-02 20:00:30.145665"], ["updated_at", "2022-11-02 20:00:30.145665"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.1ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "e"], ["map_data", "1111111111\n1000000001\n1000000001\n1111111001\n1000000001\n1000000001\n1001111111\n1000000001\n1000000001\n1111111111\n"], ["game_session_id", 3], ["created_at", "2022-11-02 20:00:30.146846"], ["updated_at", "2022-11-02 20:00:30.146846"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGameLevel Create (0.9ms)[0m  [1m[32mINSERT INTO "game_levels" ("level_name", "map_data", "game_session_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["level_name", "f"], ["map_data", "1111111111\n1000100001\n1000100001\n1000100001\n1000100001\n1000000001\n1000000001\n1001000001\n1001000001\n1111111111\n"], ["game_session_id", 3], ["created_at", "2022-11-02 20:00:30.150074"], ["updated_at", "2022-11-02 20:00:30.150074"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.2ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "fighter"], ["default_emoji", "😎"], ["can_move", 1], ["can_attack", 1], ["is_player", 1], ["dead_player", 0], ["ends_level", 0], ["default_attack", 5], ["default_speed", 1], ["default_hp", 10], ["created_at", "2022-11-02 20:00:30.152731"], ["updated_at", "2022-11-02 20:00:30.152731"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.4ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "clown"], ["default_emoji", "🤡"], ["can_move", 1], ["can_attack", 1], ["is_player", 0], ["dead_player", 0], ["ends_level", 0], ["default_attack", 3], ["default_speed", 1], ["default_hp", 5], ["created_at", "2022-11-02 20:00:30.154677"], ["updated_at", "2022-11-02 20:00:30.154677"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "bed"], ["default_emoji", "🛌"], ["can_move", 0], ["can_attack", 0], ["is_player", 0], ["dead_player", 0], ["ends_level", 1], ["default_attack", 0], ["default_speed", 0], ["default_hp", 0], ["created_at", "2022-11-02 20:00:30.156929"], ["updated_at", "2022-11-02 20:00:30.156929"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_types" ("entity_type_name", "default_emoji", "can_move", "can_attack", "is_player", "dead_player", "ends_level", "default_attack", "default_speed", "default_hp", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["entity_type_name", "bones"], ["default_emoji", "💀"], ["can_move", 1], ["can_attack", 1], ["is_player", 0], ["dead_player", 1], ["ends_level", 0], ["default_attack", 5], ["default_speed", 1], ["default_hp", 10], ["created_at", "2022-11-02 20:00:30.158221"], ["updated_at", "2022-11-02 20:00:30.158221"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Create (0.1ms)[0m  [1m[32mINSERT INTO "entities" ("custom_emoji", "game_level_id", "position_x", "position_y", "attack_stat", "speed_stat", "hp_stat", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["custom_emoji", nil], ["game_level_id", 1], ["position_x", 85], ["position_y", 75], ["attack_stat", nil], ["speed_stat", nil], ["hp_stat", nil], ["created_at", "2022-11-02 20:00:30.159452"], ["updated_at", "2022-11-02 20:00:30.159452"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Create (0.2ms)[0m  [1m[32mINSERT INTO "entities" ("custom_emoji", "game_level_id", "position_x", "position_y", "attack_stat", "speed_stat", "hp_stat", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["custom_emoji", nil], ["game_level_id", 1], ["position_x", 225], ["position_y", 95], ["attack_stat", nil], ["speed_stat", nil], ["hp_stat", nil], ["created_at", "2022-11-02 20:00:30.160958"], ["updated_at", "2022-11-02 20:00:30.160958"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntity Create (0.1ms)[0m  [1m[32mINSERT INTO "entities" ("custom_emoji", "game_level_id", "position_x", "position_y", "attack_stat", "speed_stat", "hp_stat", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["custom_emoji", nil], ["game_level_id", 1], ["position_x", 525], ["position_y", 575], ["attack_stat", nil], ["speed_stat", nil], ["hp_stat", nil], ["created_at", "2022-11-02 20:00:30.162407"], ["updated_at", "2022-11-02 20:00:30.162407"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.2ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 1], ["entity_type_id", 1], ["created_at", "2022-11-02 20:00:30.167450"], ["updated_at", "2022-11-02 20:00:30.167450"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 2], ["entity_type_id", 2], ["created_at", "2022-11-02 20:00:30.169126"], ["updated_at", "2022-11-02 20:00:30.169126"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.2ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 3], ["entity_type_id", 3], ["created_at", "2022-11-02 20:00:30.170489"], ["updated_at", "2022-11-02 20:00:30.170489"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 4], ["entity_type_id", 1], ["created_at", "2022-11-02 20:00:30.171905"], ["updated_at", "2022-11-02 20:00:30.171905"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 5], ["entity_type_id", 2], ["created_at", "2022-11-02 20:00:30.173243"], ["updated_at", "2022-11-02 20:00:30.173243"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 6], ["entity_type_id", 3], ["created_at", "2022-11-02 20:00:30.174517"], ["updated_at", "2022-11-02 20:00:30.174517"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.2ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 7], ["entity_type_id", 1], ["created_at", "2022-11-02 20:00:30.176062"], ["updated_at", "2022-11-02 20:00:30.176062"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 8], ["entity_type_id", 2], ["created_at", "2022-11-02 20:00:30.177385"], ["updated_at", "2022-11-02 20:00:30.177385"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEntityHaveType Create (0.1ms)[0m  [1m[32mINSERT INTO "entity_have_types" ("entity_id", "entity_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["entity_id", 9], ["entity_type_id", 3], ["created_at", "2022-11-02 20:00:30.178574"], ["updated_at", "2022-11-02 20:00:30.178574"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
